@@ -4,21 +4,78 @@ body{
     background-attachment: fixed;
     background-size: cover;    
     padding-top: 220px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.fontstyle1{
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
 }
 
-h1 {
-     font-family: "Cinzel", serif;
-     font-optical-sizing: auto;
-     font-weight: 500px;
-     font-style: normal;     
-     font-size: 45px;
-     color: #ffffff;
+.navbar {
+    position: fixed; /* Keeps the navbar fixed at the top */
+    top: 0; /* Positions the navbar at the top of the page */
+    left: 50%; /* Centers the navbar horizontally */
+    transform: translateX(-50%); /* Adjusts the position to truly center it */
+    display: flex; /* Use flexbox for the navbar items */
+    padding: 10px 20px; /* Padding around the navbar */
+    z-index: 1000; /* Ensures the navbar stays above other content */
+    background: transparent; /* Make navbar background transparent to show gradient */
 }
-header{ 
-    position:absolute;
-    top: 0;
-    left: 900;
-    right: 100;
-    width: 100%;
-    height: 200px;
+.navbar ul {
+    list-style: none;       /* Removes bullets */
+    margin: 0;             /* Removes default margin */
+    padding: 0;            /* Removes default padding */
+    display: flex;         /* Displays the list items in a row */
 }
+
+.navbar ul li {
+    margin-left: 15px;      /* Adds space between navigation items */
+}
+
+.navbar ul li a {
+    display: inline-block;   /* Ensures links are treated as blocks */
+    position: relative;      /* Required for the positioning of the ::after pseudo-element */
+    color: #fffdff;         /* Set the color of the links */
+    text-decoration: none;   /* Remove underline from links */
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+/* Underline effect for each link */
+.navbar ul li a::after {
+    content: '';             /* Required for the pseudo-element */
+    display: block;          /* Changes the display to block to create the underline */
+    height: 2px;            /* Thickness of the underline */
+    background: #f90303;    /* Color of the underline */
+    width: 0;               /* Initial width set to 0 */
+    transition: width 0.3s ease; /* Animation for the width */
+    position: absolute;      /* Positions the underline absolutely relative to the link */
+    left: 50%;               /* Center the underline */
+    bottom: 0;               /* Position it at the bottom of the link */
+    transform: translateX(-50%); /* Adjust positioning to center */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;            /* Width becomes 100% on hover */
+}
+.content {
+width: 100%;
+position: absolute;
+top: 50%;
+transform: translateY(100%);
+text-align: center;
+color: #fff;
+}
+.content h1{
+font-size: 40px;
+margin-top: 80px;
+}
+  .content p{
+margin: 20px auto;
+font-weight: 100;
+line-height: 25px;
+  }
+
