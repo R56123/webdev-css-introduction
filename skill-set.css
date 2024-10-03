@@ -61,6 +61,10 @@ body{
 .navbar ul li a:hover::after {
     width: 100%;            /* Width becomes 100% on hover */
 }
+.navbar ul li a.active{
+color:#f90303
+
+}
 .content {
 width: 100%;
 position: absolute;

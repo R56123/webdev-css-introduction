@@ -4,9 +4,20 @@ body{
     background-attachment: fixed;
     background-size: cover;    
     padding-top: 220px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-.fontstyle1{
+    header {
+        position: absolute;
+        top: 20px;  /* Distance from the top of the page */
+        left: 60px; /* Distance from the left of the page */
+        z-index: 1000; /* Keeps the element on top of other content */
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+    }
+    
+
+.fontsize1{
       font-family: "Raleway", sans-serif;
       font-optical-sizing: auto;
       font-weight: weight;
@@ -35,6 +46,7 @@ body{
 }
 
 .navbar ul li a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: inline-block;   /* Ensures links are treated as blocks */
     position: relative;      /* Required for the positioning of the ::after pseudo-element */
     color: #fffdff;         /* Set the color of the links */
@@ -61,6 +73,10 @@ body{
 .navbar ul li a:hover::after {
     width: 100%;            /* Width becomes 100% on hover */
 }
+.navbar ul li a.active{
+color: rgb(255, 45, 45);
+font-weight: bold;
+}
 .content {
 width: 100%;
 position: absolute;
@@ -68,6 +84,8 @@ top: 50%;
 transform: translateY(100%);
 text-align: center;
 color: #fff;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
 }
 .content h1{
 font-size: 40px;
